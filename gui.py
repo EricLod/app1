@@ -7,14 +7,22 @@ sg.theme("Black")
 clock = sg.Text("", key="clock")
 label = sg.Text("Hello World")
 input_box = sg.InputText(tooltip="Enter todo", key="todo")
-add_button = sg.Button("Add", size=10)
+add_button = sg.Button(size=10, image_source="add.png",
+                       mouseover_colors="LightBlue2",
+                       tooltip="Add Todo",
+                       key="Add")
+
 list_box = sg.Listbox(values=functions.get_todos(),
                       key="todos",
                       enable_events=True,
                       size=[45, 10])
 
 edit_button = sg.Button("Edit")
-complete_button = sg.Button("Complete")
+complete_button = sg.Button(size=10, image_source="complete.png",
+                            mouseover_colors="LightBlue2",
+                            tooltip="Add Todo",
+                            key="Complete")
+
 exit_button = sg.Button("Exit")
 
 layoutStyle = [[clock],
